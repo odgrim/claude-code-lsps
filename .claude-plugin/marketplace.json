@@ -176,6 +176,25 @@
         "name": "Piebald LLC",
         "email": "support@piebald.ai"
       }
+    },
+    {
+      "name": "powershell-editor-services",
+      "version": "0.1.0",
+      "source": "./powershell-editor-services",
+      "description": "Official PowerShell language server by Microsoft",
+      "category": "development",
+      "tags": [
+        "powershell",
+        "ps1",
+        "lsp",
+        "language-server",
+        "microsoft",
+        "scripting"
+      ],
+      "author": {
+        "name": "Piebald LLC",
+        "email": "support@piebald.ai"
+      }
     }
   ]
 }
