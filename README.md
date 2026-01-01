@@ -6,7 +6,7 @@
 <div align="left">
 
 ### Announcement: Piebald is released!
-We've released **Piebald**, the ultimate agentic AI developer experience. \\
+We've released **Piebald**, the ultimate agentic AI developer experience. \
 Download it and try it out for free!  **https://piebald.ai/**
 
 <sub>[Scroll down for Claude Code LSPs.](#claude-code-lsps) :point_down:</sub>
