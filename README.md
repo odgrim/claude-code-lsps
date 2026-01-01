@@ -31,23 +31,25 @@ Download it and try it out for free!  **https://piebald.ai/**
 
 This repository contains a [Claude Code marketplace](https://code.claude.com/docs/en/plugin-marketplaces) with plugins that offer LSP servers for TypeScript, Rust, Python, Go, Java, Kotlin, C/C++, PHP, Ruby, C#, PowerShell, HTML/CSS, LaTeX, and BSL (1C:Enterprise).  [LSP servers](https://microsoft.github.io/language-server-protocol) provide powerful and familiar code intelligence features to IDEs, and now Claude Code directly.
 
-[**Claude Code is going to officially support LSP soon.**](https://www.reddit.com/r/ClaudeAI/comments/1otdfo9/lsp_is_coming_to_claude_code_and_you_can_try_it)  In 2.0.30 (October 31st) they adding the working beginnings of a system to run LSP servers from plugins automatically on startup, and an `LSP` tool (enable via `$ENABLE_LSP_TOOL=1`) that Claude can use to
+[**Claude Code officially supports LSP.**](https://www.reddit.com/r/ClaudeAI/comments/1otdfo9/lsp_is_coming_to_claude_code_and_you_can_try_it)  In 2.0.74 they officially added it to the [changelog](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2074].  Previously, the new `LSP` builtin tool had to be enabled manaually via `$ENABLE_LSP_TOOL=1`.
+
+Claude can the LSP tool to
 - Go to the definition for symbols (`goToDefinition`)
+- Go to the implementation for symbols (`goToImplementation`)
 - Hover over symbols (`hover`)
 - List all the symbols in a file (`documentSymbol`)
 - Find all references to a symbol (`findReferences`)
 - Search for symbols across the workspace (`workspaceSymbol`)
+- Get the call hierarchy for a given function (`prepareCallHierarchy`)
+- Find all functions that call a given function (`incomingCalls`)
+- Find all functions/methods called by a given function (`outgoingCalls`)
 
 > [!warning]
 > Support for LSP in Claude Code is pretty raw still.  There are bugs in the different LSP operations, no documention, and no UI indication that your LSP servers are started/running/have errors or even exist.  But it's there, and with [tweakcc](https://github.com/Piebald-AI/tweakcc) you can make it work.
 
 ## Patching Claude Code
 
-You can manually patch it, but it's much easier to use [tweakcc](https://github.com/Piebald-AI/tweakcc) to automatically detect your Claude Code installation (npm or native) apply the necessary patches.
-
-Run `npx tweakcc --apply`.  It will automatically patch your Claude Code installation to make LSP support usable.  (It also does a bunch of other things like let you customize all the system prompt parts, create new CC themes, change the thinking verbs, and a lot more.)
-
-If you'd like to apply the patches yourself, go the bottom of this page.
+Run `npx tweakcc --apply`. [tweakcc](https://github.com/Piebald-AI/tweakcc) automatically detects your Claude Code installation (npm or native) and applies the necessary patches.   It will automatically patch your Claude Code installation to make CC's builtin LSP support usable.  (It also does a bunch of other things like let you customize all the system prompt parts, create new CC themes, change the thinking verbs, and a lot more.)
 
 ## Installing the plugins
 
@@ -58,16 +60,11 @@ Install them the usual way.  First make CC aware of the marketplace:
 Then enable the plugins of your choice:
 1. Run `claude`
 2. Type `/plugins`
-3. Choose `Browse and install plugins`
-4. Enter the `Claude Code Language Servers` marketplace
+3. Tab to `Marketplaces`
+4. Enter the `claude-code-lsps` marketplace and choose `Browse plugins`
 5. Select the plugins you'd like with the spacebar (e.g. TypeScript, Rust)
 6. Press "i" to install them
 7. Restart Claude Code
-
-Here's a screenshot:
-
-<img width="603" height="374" alt="image" src="https://github.com/user-attachments/assets/207ebb79-8c45-446b-9c08-eb81d235c301" />
-
 
 ## Language-specific setup instructions
 
