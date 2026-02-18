@@ -127,6 +127,22 @@ go install golang.org/x/tools/gopls@latest
 ```
 Make sure your Go bin directory is in your PATH (usually `~/go/bin`).
 
+#### MCP Code Introspection Tools
+
+The gopls plugin also configures gopls as an MCP server, giving Claude direct access to powerful Go code introspection tools:
+
+- **`go_workspace`** — Understand workspace layout (module, workspace, or GOPATH)
+- **`go_search`** — Fuzzy symbol search across the entire workspace
+- **`go_file_context`** — Understand a file's contents and intra-package dependencies
+- **`go_package_api`** — View a package's public API
+- **`go_symbol_references`** — Find all references to a symbol
+- **`go_diagnostics`** — Get build and analysis errors after edits
+- **`go_vulncheck`** — Check for known vulnerabilities in dependencies
+
+These tools go beyond passive LSP diagnostics — they allow Claude to actively navigate and understand Go codebases with full symbolic reference support.
+
+> **Note:** Requires gopls v0.21.0 or later. Update with `go install golang.org/x/tools/gopls@latest`.
+
 </details>
 
 <details>
