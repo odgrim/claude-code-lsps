@@ -75,15 +75,19 @@
     },
     {
       "name": "gopls",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "source": "./gopls",
-      "description": "Official Go language server",
+      "description": "Official Go language server with MCP-based code introspection tools",
       "category": "development",
       "tags": [
         "go",
         "golang",
         "lsp",
-        "language-server"
+        "language-server",
+        "mcp",
+        "code-introspection",
+        "symbol-search",
+        "references"
       ],
       "author": {
         "name": "Piebald LLC",
