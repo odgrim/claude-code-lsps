@@ -1,7 +1,7 @@
 {
   "name": "rust-analyzer",
-  "version": "0.1.0",
-  "description": "Rust language server",
+  "version": "0.2.0",
+  "description": "Rust language server with MCP-powered code intelligence and symbolic navigation",
   "author": {
     "name": "Piebald LLC",
     "email": "support@piebald.ai"
@@ -11,6 +11,10 @@
   "keywords": [
     "rust",
     "lsp",
-    "language-server"
+    "language-server",
+    "mcp",
+    "code-intelligence",
+    "navigation",
+    "references"
   ]
 }

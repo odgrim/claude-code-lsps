@@ -1,0 +1,9 @@
+{
+  "rust-analyzer": {
+    "command": "npx",
+    "args": ["-y", "lsp-mcp-server"],
+    "env": {
+      "LSP_LOG_LEVEL": "warn"
+    }
+  }
+}

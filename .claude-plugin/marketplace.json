@@ -25,13 +25,16 @@
     },
     {
       "name": "rust-analyzer",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "source": "./rust-analyzer",
-      "description": "Rust language server integration with rust-analyzer",
+      "description": "Rust language server with MCP-powered code intelligence and symbolic navigation",
       "category": "development",
       "tags": [
         "rust",
-        "lsp"
+        "lsp",
+        "mcp",
+        "code-intelligence",
+        "navigation"
       ],
       "author": {
         "name": "Piebald LLC",

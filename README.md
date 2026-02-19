@@ -81,6 +81,23 @@ rustup component add rust-analyzer
 
 The `rust-analyzer` executable needs to be in your PATH.
 
+#### MCP Tools
+
+This plugin also includes an MCP server bridge (via [lsp-mcp-server](https://www.npmjs.com/package/lsp-mcp-server)) that exposes 24 MCP tools for enhanced code intelligence:
+
+- **Navigation**: Go to definition, declaration, type definition, implementation
+- **References**: Find all references, incoming/outgoing calls
+- **Information**: Hover details, signature help, document highlights
+- **Symbols**: Document symbols, workspace symbol search
+- **Call hierarchy**: Prepare, incoming calls, outgoing calls
+- **Type hierarchy**: Prepare, supertypes, subtypes
+- **Diagnostics**: Get workspace diagnostics
+- **Refactoring**: Rename symbols, code actions, formatting
+
+**Requirements:** Node.js 18+ and `npx` must be available in your PATH.
+
+> **Note:** The MCP tools work alongside the existing LSP tools, providing additional capabilities through the MCP protocol.
+
 </details>
 
 <details>
